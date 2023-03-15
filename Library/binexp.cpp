@@ -3,10 +3,10 @@ using namespace std;
 #define ll long long
 
 ll mod = 1e9 + 7;
-
-int binexp(int base, int exp) {
+//fast-!-paste
+ll binexp(ll base, ll exp) {
   base %= mod;
-  int result = 1;
+  ll result = 1;
   while (exp > 0) {
     if (exp & 1) result = ((ll)result * base) % mod;
     base = ((ll)base * base) % mod;
@@ -14,3 +14,4 @@ int binexp(int base, int exp) {
   }
   return result;
 }
+
